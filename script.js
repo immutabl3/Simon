@@ -1,3 +1,10 @@
+import './styles/style.scss';
+import './scripts/index';
+
+
+
+
+
 $(document).ready(function() {
   let count = 1;
   let compPicks = [];
@@ -168,3 +175,5 @@ $(document).ready(function() {
     }
   });
 }); //end of document.ready()
+
+

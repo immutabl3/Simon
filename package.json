@@ -1,0 +1,30 @@
+{
+  "name": "simon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immutabl3/Simon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/immutabl3/Simon/issues"
+  },
+  "homepage": "https://github.com/immutabl3/Simon#readme",
+  "dependencies": {
+    "baobab": "^2.5.2",
+    "classnames": "^2.2.6",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "signal-js": "^1.0.2"
+  }
+}
