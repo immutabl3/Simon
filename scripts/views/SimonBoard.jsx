@@ -1,12 +1,23 @@
 import React from 'react';
+import SimonButton from './SimonButton';
+import { branch } from 'baobab-react/higher-order';
 
-export default function SimonBoard() {
+const SimonBoard = function(props) {
 	return (
 		<div className="buttons">
-			<div className="color-button color-button--green"/>
-			<div className="color-button color-button--red"/>
-			<div className="color-button color-button--blue"/>
-			<div className="color-button color-button--yellow"/>
+			{props.buttons.map((button, index) => {
+				return (
+					<SimonButton
+						{...button}
+						key={ index }
+						index={ index }
+					/>
+				);
+			})}
 		</div>
 	);
-}
+};
+
+export default branch({
+	buttons: ['buttons'],
+}, SimonBoard);

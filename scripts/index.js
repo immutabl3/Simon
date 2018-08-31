@@ -1,29 +1,21 @@
-import store from './store';
+import 'babel-polyfill';
+import createStore from './store';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './views/Root';
-import signal from 'signal-js';
-
+import actions from './actions/index';
+import createGame from './game';
+import { root } from 'baobab-react/higher-order';
 
 const init = function() {
-	const root = document.querySelector('#root');
-	const render = () => ReactDOM.render(<Root {...store.get()}/>, root);
+	const store = createStore();
+	const game = createGame(store);
+	const mount = document.querySelector('#mount');
+	const RootedApp = root(store, Root);
+	const render = () => ReactDOM.render(<RootedApp />, mount);
 	store.on('update', render);
+	actions(store, game);
 	render();
 };
-
-signal.on('strictOff', () => {
-	store.set('strict', false);
-	console.log(store.get('strict'));
-});
-
-signal.on('strictOn', () => {
-	store.set('strict', true);
-	console.log(store.get('strict'));
-});
-
-signal.on('start', () => {
-	console.log("start");
-});
 
 init();

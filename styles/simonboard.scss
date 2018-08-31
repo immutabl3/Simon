@@ -1,44 +1,43 @@
 .buttons {
-	margin: 10vh auto;
-	width: 55vh;
-  }
+margin: 10vh auto;
+width: 55vh;
+}
 
-  .color-button {
+.color-button {
 	width: 25vh;
 	height: 25vh;
 	margin: 2.5vh auto;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
 	cursor: pointer;
-	pointer-events: none;
 
-		&:active {
-			box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
-			transform: scale(0.925);
-			filter: brightness(175%);
-	 }
-	 	&--green {
-			background-color: #1c9327;
-			float: left;
-			border-top-left-radius: 100%;
-		  }
-		&--red {
-			background-color: #a02424;
-			float: right;
-			border-top-right-radius: 100%;
-		  }
-		&--yellow {
-			background-color: #c1c100;
-			float: left;
-			border-bottom-left-radius: 100%;
-		  }
-		&--blue {
-			background-color: #403ea5;
-			float: right;
-			border-bottom-right-radius: 100%;
-		  }
-		&--pressed {
-			box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
-			transform: scale(0.925);
+	&--active {
+		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+		transform: scale(0.925);
+		filter: brightness(175%);
+	}
+	&--green {
+		background-color: #1c9327;
+		float: left;
+		border-top-left-radius: 100%;
 		}
-  }
+	&--red {
+		background-color: #a02424;
+		float: right;
+		border-top-right-radius: 100%;
+		}
+	&--yellow {
+		background-color: #c1c100;
+		float: left;
+		border-bottom-left-radius: 100%;
+		}
+	&--blue {
+		background-color: #403ea5;
+		float: right;
+		border-bottom-right-radius: 100%;
+		}
+	&--pressed {
+		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
+		transform: scale(0.925);
+	}
+}
 
