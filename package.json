@@ -5,7 +5,11 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+	"start": "node -r esm server",
+	"watch": "parcel scripts/index.js styles/style.scss",
+	"build": "parcel build scripts/index.js styles/style.scss",
+	"dev": "node -r dotenv/config -r esm server",
+	"heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,9 @@
     "baobab-react": "^3.0.0",
     "bootstrap": "^4.1.3",
     "classnames": "^2.2.6",
+    "dotenv": "^6.0.0",
+    "esm": "^3.0.82",
+    "express": "^4.16.3",
     "http-server": "^0.11.1",
     "lodash": "^4.17.10",
     "node-sass": "^4.9.3",
